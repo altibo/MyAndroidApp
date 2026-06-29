@@ -1,0 +1,306 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap");
+
+:root {
+  color-scheme: dark;
+  --bg: #08111f;
+  --surface: rgba(17, 30, 49, 0.72);
+  --line: rgba(180, 211, 255, 0.14);
+  --text: #f4f7fb;
+  --muted: #98a8bd;
+  --blue: #60a5fa;
+  --cyan: #67e8f9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at 50% -30%, #19375f 0, transparent 52%),
+    var(--bg);
+  color: var(--text);
+  font-family: "DM Sans", sans-serif;
+}
+
+.glow {
+  position: fixed;
+  z-index: -1;
+  width: 28rem;
+  height: 28rem;
+  border-radius: 999px;
+  filter: blur(110px);
+  opacity: 0.13;
+}
+
+.glow-one {
+  top: 18%;
+  left: -15rem;
+  background: var(--blue);
+}
+
+.glow-two {
+  right: -17rem;
+  bottom: 4%;
+  background: var(--cyan);
+}
+
+main,
+footer {
+  width: min(1120px, calc(100% - 40px));
+  margin-inline: auto;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 0;
+}
+
+.brand {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  color: var(--text);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.brand-mark {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 11px;
+  background: linear-gradient(145deg, var(--blue), #2563eb);
+  box-shadow: 0 8px 28px rgba(37, 99, 235, 0.3);
+  font-family: "Manrope", sans-serif;
+}
+
+.github-link {
+  color: var(--muted);
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 160ms ease;
+}
+
+.github-link:hover {
+  color: var(--text);
+}
+
+.hero {
+  padding: 118px 0 110px;
+}
+
+.eyebrow {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  margin-bottom: 25px;
+  color: var(--cyan);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.eyebrow span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--cyan);
+  box-shadow: 0 0 14px var(--cyan);
+}
+
+h1 {
+  max-width: 880px;
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(48px, 8vw, 94px);
+  line-height: 1;
+  letter-spacing: -0.055em;
+}
+
+h1 em {
+  background: linear-gradient(90deg, #dbeafe 0%, var(--blue) 55%, var(--cyan) 100%);
+  background-clip: text;
+  color: transparent;
+  font-style: normal;
+}
+
+.intro {
+  max-width: 630px;
+  margin: 34px 0 52px;
+  color: var(--muted);
+  font-size: clamp(17px, 2vw, 20px);
+  line-height: 1.7;
+}
+
+.download-card {
+  display: flex;
+  max-width: 780px;
+  gap: 30px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 24px 24px 28px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: var(--surface);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.24);
+  backdrop-filter: blur(18px);
+}
+
+.card-label,
+.release-date,
+.version {
+  margin: 0;
+}
+
+.card-label {
+  margin-bottom: 4px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.version {
+  font-family: "Manrope", sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.release-date {
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.download-button {
+  display: flex;
+  min-height: 58px;
+  gap: 11px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px;
+  border-radius: 14px;
+  background: var(--text);
+  color: #09111d;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.download-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 35px rgba(96, 165, 250, 0.2);
+}
+
+.download-button.is-loading {
+  opacity: 0.7;
+}
+
+.download-icon {
+  font-size: 23px;
+  line-height: 1;
+}
+
+.status {
+  margin: 14px 0 0 5px;
+  color: #718198;
+  font-size: 12px;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.details article {
+  padding: 44px 34px 48px 0;
+}
+
+.details article + article {
+  padding-left: 34px;
+  border-left: 1px solid var(--line);
+}
+
+.number {
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+h2 {
+  margin: 23px 0 10px;
+  font-family: "Manrope", sans-serif;
+  font-size: 19px;
+}
+
+.details p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 32px 0 44px;
+  color: #64748b;
+  font-size: 12px;
+}
+
+@media (max-width: 720px) {
+  .hero {
+    padding: 76px 0 80px;
+  }
+
+  .download-card {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .download-button {
+    width: 100%;
+  }
+
+  .details {
+    grid-template-columns: 1fr;
+  }
+
+  .details article,
+  .details article + article {
+    padding: 30px 0;
+    border-left: 0;
+  }
+
+  .details article + article {
+    border-top: 1px solid var(--line);
+  }
+
+  footer {
+    gap: 10px;
+    flex-direction: column;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}

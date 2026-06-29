@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#08111f">
+    <meta
+      name="description"
+      content="Die neueste Version von MyAndroidApp als APK herunterladen."
+    >
+    <title>MyAndroidApp – APK Download</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="glow glow-one"></div>
+    <div class="glow glow-two"></div>
+
+    <main>
+      <nav>
+        <a class="brand" href="./" aria-label="MyAndroidApp Startseite">
+          <span class="brand-mark">M</span>
+          <span>MyAndroidApp</span>
+        </a>
+        <a
+          class="github-link"
+          href="https://github.com/altibo/MyAndroidApp"
+          target="_blank"
+          rel="noreferrer"
+        >GitHub ↗</a>
+      </nav>
+
+      <section class="hero">
+        <div class="eyebrow"><span></span> Python trifft Android</div>
+        <h1>Einfach laden.<br><em>Direkt ausprobieren.</em></h1>
+        <p class="intro">
+          Die aktuelle MyAndroidApp, gebaut mit Kivy und automatisch
+          veröffentlicht über GitHub Actions.
+        </p>
+
+        <div class="download-card">
+          <div>
+            <p class="card-label">Neueste Version</p>
+            <p id="version" class="version">Wird geladen …</p>
+            <p id="release-date" class="release-date">Release wird gesucht</p>
+          </div>
+          <a
+            id="download"
+            class="download-button is-loading"
+            href="https://github.com/altibo/MyAndroidApp/releases/latest/download/MyAndroidApp.apk"
+          >
+            <span class="download-icon">↓</span>
+            <span>APK herunterladen</span>
+          </a>
+        </div>
+
+        <p id="status" class="status" role="status">
+          Die APK stammt direkt aus dem neuesten GitHub Release.
+        </p>
+      </section>
+
+      <section class="details" aria-label="App-Details">
+        <article>
+          <span class="number">01</span>
+          <h2>Automatisch gebaut</h2>
+          <p>Jeder Versionstag stößt einen frischen Android-Build an.</p>
+        </article>
+        <article>
+          <span class="number">02</span>
+          <h2>Direkter Download</h2>
+          <p>Keine Umwege – die APK liegt als Asset im GitHub Release.</p>
+        </article>
+        <article>
+          <span class="number">03</span>
+          <h2>Offener Quellcode</h2>
+          <p>App, Website und Build-Konfiguration sind frei einsehbar.</p>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <span>MyAndroidApp</span>
+      <span>Gebaut mit Python · Kivy · Buildozer</span>
+    </footer>
+  </body>
+</html>
