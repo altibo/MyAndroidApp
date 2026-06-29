@@ -1,7 +1,16 @@
 # MyAndroidApp
 
-Eine minimale Android-App in Python mit Kivy, ein reproduzierbarer
+Eine Android-App in Python mit einer monochromen OpenStreetMap-Karte,
+GPS-Standortmarker und Touch-Zoom. Dazu kommen ein reproduzierbarer
 Buildozer-Build und eine Download-Seite über GitHub Pages.
+
+## Funktionen
+
+- monochrome Karte auf Basis von OpenStreetMap-Daten
+- Verschieben und Zoomen mit Touch-Gesten
+- laufend aktualisierter GPS-Standortmarker
+- Schaltfläche zum Zentrieren auf den eigenen Standort
+- Laufzeitabfrage der Android-Standortberechtigung
 
 ## App lokal starten
 
